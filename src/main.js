@@ -143,3 +143,29 @@ console.log(fee);
 const num2 = null;
 const fee2 = num2 && "何か設定されました";
 console.log(fee2);
+
+//sortメソッド
+//数字の配列 計算してプラスなら順番を入れ替える
+const numbers = [1, 10, 2];
+
+numbers.sort((a, b) => a - b);
+
+console.log(numbers);//[1, 2. 10]
+
+//オブジェクトの配列
+const users = [
+  { name: "Taro", age: 20 },
+  { name: "Jiro", age: 18 },
+  { name: "Saburo", age: 25 }
+];
+
+users.sort((a, b) => a.age - b.age);
+
+console.log(users);//18 → 20 → 25
+
+//sortでよう使うlocaleCompare()は文字列を比較して並び替えするときによく使うメソッド
+const times = ["18:00", "09:00", "12:00"];
+
+times.sort((a, b) => a.localeCompare(b));
+
+console.log(times);//["09:00", "12:00", "18:00"]
